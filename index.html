@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Revold Engine</title>
+
+<title>Revold V1</title>
 
 <!-- ICON -->
 <link rel="icon" type="image/x-icon" href="icon.ico">
 
 <style>
 
-/* =======================
-   REVOLD GLOBAL STYLE
-======================= */
+/* =====================
+   REVOLD V1 STYLE
+===================== */
 
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family:Arial;
     background:#0f1117;
     color:white;
 }
@@ -26,22 +27,20 @@ body{
 header{
     display:flex;
     justify-content:space-between;
-    align-items:center;
     padding:18px 60px;
     background:#111827;
     border-bottom:1px solid #222;
 }
 
 .logo{
+    color:#ff8c1a;
     font-size:24px;
     font-weight:bold;
-    color:#ff8c1a;
-    letter-spacing:1px;
 }
 
 nav a{
-    color:#aaa;
     margin-left:20px;
+    color:#aaa;
     text-decoration:none;
 }
 
@@ -57,16 +56,17 @@ nav a:hover{
 }
 
 .hero h1{
-    font-size:54px;
-    margin-bottom:10px;
+    font-size:58px;
 }
 
 .hero p{
-    max-width:650px;
+    max-width:700px;
     margin:auto;
     color:#bbb;
     line-height:1.6;
 }
+
+/* BUTTONS */
 
 .buttons{
     margin-top:25px;
@@ -74,7 +74,7 @@ nav a:hover{
 
 .btn{
     display:inline-block;
-    padding:14px 28px;
+    padding:14px 30px;
     margin:10px;
     border-radius:10px;
     font-weight:bold;
@@ -86,22 +86,18 @@ nav a:hover{
     color:black;
 }
 
-.secondary{
+.dark{
     background:#1f2937;
     color:white;
 }
 
-/* FEATURES */
+/* SECTION */
 
-.features{
+.section{
     padding:80px 60px;
 }
 
-.features h2{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:36px;
-}
+/* FEATURES */
 
 .grid{
     display:grid;
@@ -120,40 +116,32 @@ nav a:hover{
     color:#ff8c1a;
 }
 
-/* ENGINE SPLIT */
+/* ENGINE BLOCK VIEW */
 
 .engine{
-    padding:80px 60px;
-}
-
-.engine h2{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.split{
     display:flex;
     gap:20px;
+    margin-top:20px;
 }
 
-.panel{
+/* PROTECTED */
+
+.locked{
     flex:1;
+    background:#1a0f0f;
+    border:1px solid #ff3b3b;
     padding:20px;
     border-radius:12px;
 }
 
-/* PROTECTED CORE */
-
-.locked{
-    background:#120909;
-    border:1px solid #ff3b3b;
-}
-
-/* EDITABLE LAYER */
+/* EDITABLE */
 
 .editable{
+    flex:1;
     background:#0d1117;
     border:1px solid #2f81f7;
+    padding:20px;
+    border-radius:12px;
 }
 
 /* BLOCKS */
@@ -172,17 +160,12 @@ nav a:hover{
 .green{background:#3fb950;}
 .yellow{background:#ffcc00;color:black;}
 
+/* WARNING */
+
 .warning{
     background:#ff2d2d;
-    color:white;
-}
-
-/* WARNING SECTION */
-
-.notice{
-    text-align:center;
-    padding:60px;
-    background:#1a1a1a;
+    padding:15px;
+    border-radius:10px;
 }
 
 /* DOWNLOAD */
@@ -192,7 +175,7 @@ nav a:hover{
     padding:80px;
 }
 
-.download button{
+button{
     background:#ff8c1a;
     border:none;
     padding:15px 30px;
@@ -217,7 +200,7 @@ footer{
 <body>
 
 <header>
-    <div class="logo">REVOLD</div>
+    <div class="logo">REVOLD V1</div>
     <nav>
         <a href="#features">Features</a>
         <a href="#engine">Engine</a>
@@ -227,105 +210,96 @@ footer{
 
 <section class="hero">
     <h1>Build Games With One Sprite</h1>
+
     <p>
-        Revold is a Scratch-based game engine that separates your project into a
-        protected core system and an editable gameplay layer.
+        Revold V1 is a Scratch-based game engine featuring a protected core system
+        and an editable gameplay layer. Build full games without complexity.
     </p>
 
     <div class="buttons">
-        <a class="btn primary" href="#download">Download Revold</a>
-        <a class="btn secondary" href="#engine">View Engine</a>
+        <a class="btn primary" href="#download">Download V1</a>
+        <a class="btn dark" href="#engine">Open Engine View</a>
     </div>
 </section>
 
-<section id="features" class="features">
+<section id="features" class="section">
 
-    <h2>Engine Features</h2>
+    <h2>Features</h2>
 
     <div class="grid">
 
         <div class="card">
             <h3>🔒 Protected Core</h3>
-            <p>Engine logic that cannot be modified.</p>
+            <p>Engine logic is locked and cannot be modified.</p>
         </div>
 
         <div class="card">
             <h3>✏️ Editable Layer</h3>
-            <p>Safe workspace for building gameplay.</p>
+            <p>Safe workspace for game development.</p>
         </div>
 
         <div class="card">
-            <h3>🎮 Game Loop System</h3>
-            <p>Automatic update system powered by engine.</p>
+            <h3>🎮 One Sprite Engine</h3>
+            <p>All gameplay runs inside a single controlled system.</p>
         </div>
 
         <div class="card">
-            <h3>🔊 Sound System</h3>
-            <p>Built-in music and audio API.</p>
+            <h3>🔊 Sound + Music</h3>
+            <p>Built-in audio system integrated into runtime.</p>
         </div>
 
     </div>
 
 </section>
 
-<section id="engine" class="engine">
+<section id="engine" class="section">
 
-    <h2>Revold Engine Structure</h2>
+    <h2>Engine Structure (V1)</h2>
 
-    <div class="split">
+    <div class="engine">
 
-        <!-- PROTECTED CORE -->
-        <div class="panel locked">
+        <!-- LOCKED -->
+        <div class="locked">
 
-            <h3>🔒 Protected Core (DO NOT EDIT)</h3>
+            <h3>🔒 Core Engine (DO NOT EDIT)</h3>
 
-            <div class="block red">engine initialize</div>
-            <div class="block red">system runtime start</div>
-            <div class="block red">game loop handler</div>
-            <div class="block warning">editing disabled</div>
+            <div class="block red">revold init system</div>
+            <div class="block red">runtime handler</div>
+            <div class="block red">engine loop</div>
+
+            <div class="block warning">⚠ Editing breaks engine</div>
 
         </div>
 
-        <!-- EDITABLE AREA -->
-        <div class="panel editable">
+        <!-- EDITABLE -->
+        <div class="editable">
 
-            <h3>✏️ Editable Game Layer</h3>
+            <h3>✏️ Game Layer (Safe)</h3>
 
-            <div class="block orange">player movement</div>
-            <div class="block blue">custom scripts</div>
+            <div class="block orange">player scripts</div>
+            <div class="block blue">movement system</div>
             <div class="block purple">game logic</div>
             <div class="block green">engine API calls</div>
-            <div class="block yellow">user workspace</div>
 
         </div>
 
     </div>
-
-</section>
-
-<section class="notice">
-
-    <h2>Important Warning</h2>
-
-    <p>
-        Editing the Protected Core will break the Revold engine.
-        Only use the Editable Layer for game creation.
-    </p>
 
 </section>
 
 <section id="download" class="download">
 
-    <h2>Download Revold</h2>
+    <h2>Download Revold V1</h2>
 
     <button>Download .sb3</button>
 
+    <p>Official Release: V1</p>
     <p>revold.vercel.app</p>
 
 </section>
 
 <footer>
-    REVOLD ENGINE © 2026
+    REVOLD ENGINE V1 © 2026
 </footer>
 
 </body>
